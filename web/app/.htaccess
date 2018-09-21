@@ -1,0 +1,7 @@
+# nginx configuration
+
+deny all;
+
+location / {
+  rewrite ^(.*)$ https://$http_host$request_uri redirect;
+}
